@@ -45,7 +45,10 @@ namespace MovieBonanza
 
         private void StreamButton_Click(object sender, EventArgs e)
         {
+            StreamForm streamForm = new StreamForm();
 
+            streamForm.Show();
+            this.Hide();
         }
 
         private void StreamButton_MouseHover(object sender, EventArgs e)
@@ -97,6 +100,11 @@ namespace MovieBonanza
         private void ExitOrderFormMenuStrip_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void StreamOrderFormMenuStrip_Click(object sender, EventArgs e)
+        {
+            StreamButton_Click(sender, e);
         }
     }
 }

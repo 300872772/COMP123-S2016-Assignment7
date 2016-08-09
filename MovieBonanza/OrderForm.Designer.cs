@@ -53,6 +53,7 @@
             this.BackOrderFormMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.FileOrderFormMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.OrderFormMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.StreamOrderFormMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -336,6 +337,7 @@
             // 
             this.FileOrderFormMenuStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.BackOrderFormMenuStrip,
+            this.StreamOrderFormMenuStrip,
             this.ExitOrderFormMenuStrip});
             this.FileOrderFormMenuStrip.Name = "FileOrderFormMenuStrip";
             this.FileOrderFormMenuStrip.Size = new System.Drawing.Size(37, 20);
@@ -351,6 +353,14 @@
             this.OrderFormMenuStrip.Size = new System.Drawing.Size(982, 24);
             this.OrderFormMenuStrip.TabIndex = 6;
             this.OrderFormMenuStrip.Text = "menuStrip1";
+            // 
+            // StreamOrderFormMenuStrip
+            // 
+            this.StreamOrderFormMenuStrip.Name = "StreamOrderFormMenuStrip";
+            this.StreamOrderFormMenuStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.StreamOrderFormMenuStrip.Size = new System.Drawing.Size(152, 22);
+            this.StreamOrderFormMenuStrip.Text = "Stream";
+            this.StreamOrderFormMenuStrip.Click += new System.EventHandler(this.StreamOrderFormMenuStrip_Click);
             // 
             // OrderForm
             // 
@@ -406,5 +416,6 @@
         private System.Windows.Forms.ToolStripMenuItem BackOrderFormMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem FileOrderFormMenuStrip;
         private System.Windows.Forms.MenuStrip OrderFormMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem StreamOrderFormMenuStrip;
     }
 }
