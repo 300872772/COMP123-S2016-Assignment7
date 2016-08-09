@@ -60,7 +60,7 @@
             this.SelectFormMainLabel.BackColor = System.Drawing.Color.Transparent;
             this.SelectFormMainLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SelectFormMainLabel.ForeColor = System.Drawing.Color.Aqua;
-            this.SelectFormMainLabel.Location = new System.Drawing.Point(102, 43);
+            this.SelectFormMainLabel.Location = new System.Drawing.Point(102, 51);
             this.SelectFormMainLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SelectFormMainLabel.Name = "SelectFormMainLabel";
             this.SelectFormMainLabel.Size = new System.Drawing.Size(556, 24);
@@ -98,7 +98,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::MovieBonanza.Properties.Resources.icons_circle_MOVIElink;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(16, 15);
+            this.pictureBox2.Location = new System.Drawing.Point(16, 24);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(76, 80);
@@ -245,6 +245,7 @@
             this.NextSelectionFormMenuStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
             this.NextSelectionFormMenuStrip.Size = new System.Drawing.Size(152, 22);
             this.NextSelectionFormMenuStrip.Text = "Next";
+            this.NextSelectionFormMenuStrip.Click += new System.EventHandler(this.NextSelectionFormMenuStrip_Click);
             // 
             // ExitSelectionFormMenuStrip
             // 

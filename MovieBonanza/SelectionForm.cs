@@ -19,6 +19,9 @@ namespace MovieBonanza
 
         private void NextButton_Click(object sender, EventArgs e)
         {
+            OrderForm orderForm = new OrderForm();
+            orderForm.Show();
+            this.Hide();
 
         }
 
@@ -45,6 +48,12 @@ namespace MovieBonanza
         private void ExitSelectionFormMenuStrip_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void NextSelectionFormMenuStrip_Click(object sender, EventArgs e)
+        {
+            NextButton_Click(sender, e);
+
         }
     }
 }

@@ -73,6 +73,16 @@ namespace MovieBonanza.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap button_blank_gray_01 {
+            get {
+                object obj = ResourceManager.GetObject("button_blank_gray_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons_circle_MOVIElink {
             get {
                 object obj = ResourceManager.GetObject("icons_circle_MOVIElink", resourceCulture);
@@ -86,6 +96,16 @@ namespace MovieBonanza.Properties {
         internal static System.Drawing.Bitmap movie_noPlay_blank {
             get {
                 object obj = ResourceManager.GetObject("movie-noPlay-blank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap scrolling {
+            get {
+                object obj = ResourceManager.GetObject("scrolling", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

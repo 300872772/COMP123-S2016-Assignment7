@@ -10,7 +10,7 @@ using System.Windows.Forms;
  * Date last modified: August 09, 2016 
  * Description: This application demonstrates a Online Movie Streaming Solution  
  *  
- * Version: 0.0.1 - added selection form
+ * Version: 0.0.2 - added order form
  */
 namespace MovieBonanza
 {
