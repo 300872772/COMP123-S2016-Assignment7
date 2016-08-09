@@ -3,7 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/* 
+ *Author: Md Mamunur Rahman 
+ * Student ID: 300872772  
+ * 
+ * Date last modified: August 09, 2016 
+ * Description: This application demonstrates a Online Movie Streaming Solution  
+ *  
+ * Version: 0.0.1 - added selection form
+ */
 namespace MovieBonanza
 {
     static class Program
@@ -16,7 +24,7 @@ namespace MovieBonanza
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new SelectionForm());
         }
     }
 }
