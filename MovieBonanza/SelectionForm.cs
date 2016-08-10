@@ -12,6 +12,8 @@ namespace MovieBonanza
 {
     public partial class SelectionForm : Form
     {
+        MovieList movieList;
+        public string MovieURL;
         public SelectionForm()
         {
             InitializeComponent();
@@ -23,6 +25,14 @@ namespace MovieBonanza
             orderForm.Show();
             this.Hide();
 
+            orderForm.TitleTextBox.Text = this.TitleTextBox.Text;
+            orderForm.CategoryTextBox.Text = this.CategoryTextBox.Text;
+            orderForm.MoviePictureBox.BackgroundImage = this.MoviePictureBox.BackgroundImage;
+            orderForm.CostTextBox.Text = this.CostTextBox.Text;
+            orderForm.SubTotalTextBox.Text = orderForm.CostTextBox.Text;
+            orderForm.SalesTaxTextBox.Text = Math.Round(Convert.ToDouble(orderForm.SubTotalTextBox.Text)*.13,2).ToString();
+            orderForm.GrandTotalTextBox.Text = Math.Round(Convert.ToDouble(orderForm.SubTotalTextBox.Text) + Convert.ToDouble(orderForm.SalesTaxTextBox.Text),2).ToString();
+            orderForm.MovieURL = this.MovieURL;
         }
 
         private void NextButton_MouseHover(object sender, EventArgs e)
@@ -53,6 +63,36 @@ namespace MovieBonanza
         private void NextSelectionFormMenuStrip_Click(object sender, EventArgs e)
         {
             NextButton_Click(sender, e);
+
+        }
+
+        private void SelectionForm_Load(object sender, EventArgs e)
+        {
+             movieList = new MovieList("movieData");
+            
+
+            foreach (var item in movieList)
+            {
+                MovieSelectListBox.Items.Add(item.Title);
+            }
+
+            MovieSelectListBox.SetSelected(0,true);
+            TitleTextBox.Text = movieList[0].Title;
+            CategoryTextBox.Text = movieList[0].Category;
+            CostTextBox.Text = movieList[0].Cost.ToString();
+            MoviePictureBox.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject(movieList[0].MovieImage.Trim());
+            MovieURL = movieList[0].MovieURL;
+
+
+        }
+
+        private void MovieSelectListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TitleTextBox.Text = movieList[MovieSelectListBox.SelectedIndex].Title;
+            CategoryTextBox.Text = movieList[MovieSelectListBox.SelectedIndex].Category;
+            CostTextBox.Text = movieList[MovieSelectListBox.SelectedIndex].Cost.ToString();
+            MoviePictureBox.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject(movieList[MovieSelectListBox.SelectedIndex].MovieImage.Trim());
+            MovieURL = movieList[MovieSelectListBox.SelectedIndex].MovieURL;
 
         }
     }

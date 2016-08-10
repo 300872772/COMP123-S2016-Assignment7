@@ -37,10 +37,10 @@
             this.CostLabel = new System.Windows.Forms.Label();
             this.CatagoryLabel = new System.Windows.Forms.Label();
             this.TitleLabel = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.CostTextBox = new System.Windows.Forms.TextBox();
+            this.CategoryTextBox = new System.Windows.Forms.TextBox();
+            this.TitleTextBox = new System.Windows.Forms.TextBox();
+            this.MoviePictureBox = new System.Windows.Forms.PictureBox();
             this.NextButton = new System.Windows.Forms.Button();
             this.SelectionFormMenuStrip = new System.Windows.Forms.MenuStrip();
             this.FileSelectionFormMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,7 +50,7 @@
             this.AboutUsSelectionFormMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.MovieSelectGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MoviePictureBox)).BeginInit();
             this.SelectionFormMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,8 +90,8 @@
             this.MovieSelectListBox.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.MovieSelectListBox.Name = "MovieSelectListBox";
             this.MovieSelectListBox.Size = new System.Drawing.Size(272, 362);
-            this.MovieSelectListBox.Sorted = true;
             this.MovieSelectListBox.TabIndex = 6;
+            this.MovieSelectListBox.SelectedIndexChanged += new System.EventHandler(this.MovieSelectListBox_SelectedIndexChanged);
             // 
             // pictureBox2
             // 
@@ -111,10 +111,10 @@
             this.MovieSelectGroupBox.Controls.Add(this.CostLabel);
             this.MovieSelectGroupBox.Controls.Add(this.CatagoryLabel);
             this.MovieSelectGroupBox.Controls.Add(this.TitleLabel);
-            this.MovieSelectGroupBox.Controls.Add(this.textBox3);
-            this.MovieSelectGroupBox.Controls.Add(this.textBox2);
-            this.MovieSelectGroupBox.Controls.Add(this.textBox1);
-            this.MovieSelectGroupBox.Controls.Add(this.pictureBox1);
+            this.MovieSelectGroupBox.Controls.Add(this.CostTextBox);
+            this.MovieSelectGroupBox.Controls.Add(this.CategoryTextBox);
+            this.MovieSelectGroupBox.Controls.Add(this.TitleTextBox);
+            this.MovieSelectGroupBox.Controls.Add(this.MoviePictureBox);
             this.MovieSelectGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.MovieSelectGroupBox.Location = new System.Drawing.Point(314, 138);
             this.MovieSelectGroupBox.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
@@ -155,45 +155,47 @@
             this.TitleLabel.TabIndex = 4;
             this.TitleLabel.Text = "Title";
             // 
-            // textBox3
+            // CostTextBox
             // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(508, 224);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(121, 26);
-            this.textBox3.TabIndex = 3;
+            this.CostTextBox.BackColor = System.Drawing.Color.White;
+            this.CostTextBox.Location = new System.Drawing.Point(508, 224);
+            this.CostTextBox.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.CostTextBox.Name = "CostTextBox";
+            this.CostTextBox.ReadOnly = true;
+            this.CostTextBox.Size = new System.Drawing.Size(121, 26);
+            this.CostTextBox.TabIndex = 3;
             // 
-            // textBox2
+            // CategoryTextBox
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(254, 224);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(224, 26);
-            this.textBox2.TabIndex = 2;
+            this.CategoryTextBox.BackColor = System.Drawing.Color.White;
+            this.CategoryTextBox.Location = new System.Drawing.Point(254, 224);
+            this.CategoryTextBox.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.CategoryTextBox.Name = "CategoryTextBox";
+            this.CategoryTextBox.ReadOnly = true;
+            this.CategoryTextBox.Size = new System.Drawing.Size(224, 26);
+            this.CategoryTextBox.TabIndex = 2;
             // 
-            // textBox1
+            // TitleTextBox
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(254, 71);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(375, 26);
-            this.textBox1.TabIndex = 1;
+            this.TitleTextBox.BackColor = System.Drawing.Color.White;
+            this.TitleTextBox.Location = new System.Drawing.Point(254, 71);
+            this.TitleTextBox.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.TitleTextBox.Name = "TitleTextBox";
+            this.TitleTextBox.ReadOnly = true;
+            this.TitleTextBox.Size = new System.Drawing.Size(375, 26);
+            this.TitleTextBox.TabIndex = 1;
             // 
-            // pictureBox1
+            // MoviePictureBox
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 35);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(213, 222);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.MoviePictureBox.BackColor = System.Drawing.Color.White;
+            this.MoviePictureBox.BackgroundImage = global::MovieBonanza.Properties.Resources.waitingforever;
+            this.MoviePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MoviePictureBox.Location = new System.Drawing.Point(12, 35);
+            this.MoviePictureBox.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.MoviePictureBox.Name = "MoviePictureBox";
+            this.MoviePictureBox.Size = new System.Drawing.Size(230, 222);
+            this.MoviePictureBox.TabIndex = 0;
+            this.MoviePictureBox.TabStop = false;
             // 
             // NextButton
             // 
@@ -243,7 +245,7 @@
             // 
             this.NextSelectionFormMenuStrip.Name = "NextSelectionFormMenuStrip";
             this.NextSelectionFormMenuStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.NextSelectionFormMenuStrip.Size = new System.Drawing.Size(152, 22);
+            this.NextSelectionFormMenuStrip.Size = new System.Drawing.Size(141, 22);
             this.NextSelectionFormMenuStrip.Text = "Next";
             this.NextSelectionFormMenuStrip.Click += new System.EventHandler(this.NextSelectionFormMenuStrip_Click);
             // 
@@ -251,7 +253,7 @@
             // 
             this.ExitSelectionFormMenuStrip.Name = "ExitSelectionFormMenuStrip";
             this.ExitSelectionFormMenuStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.ExitSelectionFormMenuStrip.Size = new System.Drawing.Size(152, 22);
+            this.ExitSelectionFormMenuStrip.Size = new System.Drawing.Size(141, 22);
             this.ExitSelectionFormMenuStrip.Text = "Exit";
             this.ExitSelectionFormMenuStrip.Click += new System.EventHandler(this.ExitSelectionFormMenuStrip_Click);
             // 
@@ -277,6 +279,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::MovieBonanza.Properties.Resources.movie_noPlay_blank;
             this.ClientSize = new System.Drawing.Size(982, 510);
+            this.ControlBox = false;
             this.Controls.Add(this.SelectionFormMenuStrip);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.MovieSelectGroupBox);
@@ -287,12 +290,16 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SelectionForm";
+            this.ShowIcon = false;
             this.Text = "Movie Bonanza - Your Online Streaming Service";
+            this.Load += new System.EventHandler(this.SelectionForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.MovieSelectGroupBox.ResumeLayout(false);
             this.MovieSelectGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MoviePictureBox)).EndInit();
             this.SelectionFormMenuStrip.ResumeLayout(false);
             this.SelectionFormMenuStrip.PerformLayout();
             this.ResumeLayout(false);
@@ -310,10 +317,10 @@
         private System.Windows.Forms.Label CostLabel;
         private System.Windows.Forms.Label CatagoryLabel;
         private System.Windows.Forms.Label TitleLabel;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox CostTextBox;
+        private System.Windows.Forms.TextBox CategoryTextBox;
+        private System.Windows.Forms.TextBox TitleTextBox;
+        private System.Windows.Forms.PictureBox MoviePictureBox;
         private System.Windows.Forms.Button NextButton;
         private System.Windows.Forms.MenuStrip SelectionFormMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem FileSelectionFormMenuStrip;

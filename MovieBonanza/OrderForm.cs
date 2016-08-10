@@ -12,6 +12,7 @@ namespace MovieBonanza
 {
     public partial class OrderForm : Form
     {
+        public string MovieURL;
         public OrderForm()
         {
             InitializeComponent();
@@ -47,8 +48,21 @@ namespace MovieBonanza
         {
             StreamForm streamForm = new StreamForm();
 
+
+
+            streamForm.Title = this.TitleTextBox.Text;
+            streamForm.Category = this.CategoryTextBox.Text;
+            streamForm.MovieImage = this.MoviePictureBox.BackgroundImage;
+            streamForm.Cost = this.CostTextBox.Text;
+            streamForm.SubTotal = this.SubTotalTextBox.Text;
+            streamForm.SalesTax = this.SalesTaxTextBox.Text;
+            streamForm.GrandTotal = this.GrandTotalTextBox.Text;
+            if (this.DVDCheckBox.Checked) streamForm.DVD = true; else streamForm.DVD = false;
+            streamForm.MovieURL = this.MovieURL;
+
             streamForm.Show();
             this.Hide();
+
         }
 
         private void StreamButton_MouseHover(object sender, EventArgs e)
@@ -105,6 +119,24 @@ namespace MovieBonanza
         private void StreamOrderFormMenuStrip_Click(object sender, EventArgs e)
         {
             StreamButton_Click(sender, e);
+        }
+
+        private void DVDCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if(DVDCheckBox.Checked)
+            {
+                this.GrandTotalTextBox.Text = Math.Round(Convert.ToDouble(this.SubTotalTextBox.Text) + Convert.ToDouble(this.SalesTaxTextBox.Text) + 10, 2).ToString();
+            }
+            else
+            {
+                this.GrandTotalTextBox.Text = Math.Round(Convert.ToDouble(this.SubTotalTextBox.Text) + Convert.ToDouble(this.SalesTaxTextBox.Text), 2).ToString();
+
+            }
+        }
+
+        private void OrderForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

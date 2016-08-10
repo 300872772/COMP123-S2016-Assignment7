@@ -12,6 +12,16 @@ namespace MovieBonanza
 {
     public partial class StreamForm : Form
     {
+        public string Title;
+        public string Category;
+        public Image MovieImage;
+        public string Cost;
+        public string SubTotal;
+        public string SalesTax;
+        public string GrandTotal;
+        public bool DVD;
+        public string MovieURL;
+
         public StreamForm()
         {
             InitializeComponent();
@@ -22,6 +32,18 @@ namespace MovieBonanza
             OrderForm orderForm = new OrderForm();
             orderForm.Show();
             this.Hide();
+
+            orderForm.TitleTextBox.Text = this.Title;
+            orderForm.CategoryTextBox.Text = this.Category;
+            orderForm.MoviePictureBox.BackgroundImage = this.MovieImage;
+            orderForm.CostTextBox.Text = this.Cost;
+            orderForm.SubTotalTextBox.Text = this.SubTotal;
+            orderForm.SalesTaxTextBox.Text = this.SalesTax;
+            orderForm.GrandTotalTextBox.Text = this.GrandTotal;
+            if (this.DVD.Equals(true)) orderForm.DVDCheckBox.Checked=true; else orderForm.DVDCheckBox.Checked=false;
+            orderForm.MovieURL = this.MovieURL;
+
+
         }
         private void BackButton_MouseHover(object sender, EventArgs e)
         {
@@ -78,6 +100,31 @@ namespace MovieBonanza
         private void ExitStreamFormMenuStrip_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void StreamForm_Load(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void StreamForm_Activated(object sender, EventArgs e)
+        {
+            if (this.MovieURL != "")
+            {
+                const string page = "<html><head><title></title></head><body>{0}</body></html>";
+                this.StreamWebBrowser.DocumentText = string.Format(page, "<iframe width=\"560\" height=\"315\" src=\"" + this.MovieURL + "\" frameborder=\"0\" allowfullscreen></iframe>");
+               
+            }
+            else
+            {
+                MessageBox.Show("Movie URL is not correct");
+            }
+        }
+
+        private void StreamWebBrowser_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
         }
     }
 }
