@@ -10,7 +10,7 @@ using System.Windows.Forms;
  * Date last modified: August 09, 2016 
  * Description: This application demonstrates a Online Movie Streaming Solution  
  *  
- * Version: 0.0.4 - added functionality to stream youtube video
+ * Version: 0.0.5 - added splash form
  */
 namespace MovieBonanza
 {
@@ -24,7 +24,7 @@ namespace MovieBonanza
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SelectionForm());
+            Application.Run(new SplashForm());
         }
     }
 }

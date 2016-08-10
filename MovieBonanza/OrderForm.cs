@@ -13,6 +13,7 @@ namespace MovieBonanza
     public partial class OrderForm : Form
     {
         public string MovieURL;
+        public int MovieSelectionIndex;
         public OrderForm()
         {
             InitializeComponent();
@@ -23,6 +24,13 @@ namespace MovieBonanza
             SelectionForm selectForm = new SelectionForm();
             selectForm.Show();
             this.Hide();
+
+          selectForm.MovieSelectListBox.SetSelected(MovieSelectionIndex, true);
+            selectForm.TitleTextBox.Text = this.TitleTextBox.Text;
+            selectForm.CategoryTextBox.Text = this.CategoryTextBox.Text;
+            selectForm.MoviePictureBox.BackgroundImage = this.MoviePictureBox.BackgroundImage;
+            selectForm.CostTextBox.Text = this.CostTextBox.Text;
+
         }
         private void BackButton_MouseHover(object sender, EventArgs e)
         {
@@ -59,7 +67,7 @@ namespace MovieBonanza
             streamForm.GrandTotal = this.GrandTotalTextBox.Text;
             if (this.DVDCheckBox.Checked) streamForm.DVD = true; else streamForm.DVD = false;
             streamForm.MovieURL = this.MovieURL;
-
+            streamForm.MovieSelectionIndex = this.MovieSelectionIndex;
             streamForm.Show();
             this.Hide();
 
@@ -126,17 +134,60 @@ namespace MovieBonanza
             if(DVDCheckBox.Checked)
             {
                 this.GrandTotalTextBox.Text = Math.Round(Convert.ToDouble(this.SubTotalTextBox.Text) + Convert.ToDouble(this.SalesTaxTextBox.Text) + 10, 2).ToString();
+
+                DVDCostLabel.Visible = true;
+                DVDCostTextBox.Visible = true;
+                DVDCostTextBox.Text = "10.00";
             }
             else
             {
                 this.GrandTotalTextBox.Text = Math.Round(Convert.ToDouble(this.SubTotalTextBox.Text) + Convert.ToDouble(this.SalesTaxTextBox.Text), 2).ToString();
 
+                DVDCostLabel.Visible = false;
+                DVDCostTextBox.Visible = false;
             }
         }
 
         private void OrderForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void CancleButton_Click(object sender, EventArgs e)
+        {
+            SelectionForm selectForm = new SelectionForm();
+            selectForm.Show();
+            this.Close();
+        }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Do you want to print?", "Confirmation", MessageBoxButtons.YesNoCancel);
+            if(result==DialogResult.Yes)
+            { 
+                MessageBox.Show("Printing is in process.");
+            }
+            else if (result == DialogResult.No)
+            {
+                MessageBox.Show("Printing has been canceled.");
+
+            }
+            else
+            {
+                MessageBox.Show("Printing has been canceled.");
+            }
+
+        }
+
+        private void cancelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CancleButton_Click(sender, e);
+        }
+
+        private void AboutUsOrderFormMenuStrip_Click(object sender, EventArgs e)
+        {
+            MovieBonanzaAboutBox aboutBox = new MovieBonanzaAboutBox();
+             aboutBox.ShowDialog();
         }
     }
 }

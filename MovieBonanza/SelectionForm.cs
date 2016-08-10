@@ -33,6 +33,7 @@ namespace MovieBonanza
             orderForm.SalesTaxTextBox.Text = Math.Round(Convert.ToDouble(orderForm.SubTotalTextBox.Text)*.13,2).ToString();
             orderForm.GrandTotalTextBox.Text = Math.Round(Convert.ToDouble(orderForm.SubTotalTextBox.Text) + Convert.ToDouble(orderForm.SalesTaxTextBox.Text),2).ToString();
             orderForm.MovieURL = this.MovieURL;
+            orderForm.MovieSelectionIndex = MovieSelectListBox.SelectedIndex;
         }
 
         private void NextButton_MouseHover(object sender, EventArgs e)
@@ -93,6 +94,15 @@ namespace MovieBonanza
             CostTextBox.Text = movieList[MovieSelectListBox.SelectedIndex].Cost.ToString();
             MoviePictureBox.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject(movieList[MovieSelectListBox.SelectedIndex].MovieImage.Trim());
             MovieURL = movieList[MovieSelectListBox.SelectedIndex].MovieURL;
+
+
+        }
+
+        private void AboutUsSelectionFormMenuStrip_Click(object sender, EventArgs e)
+        {
+            MovieBonanzaAboutBox aboutBox = new MovieBonanzaAboutBox();
+            aboutBox.ShowDialog();
+
 
         }
     }

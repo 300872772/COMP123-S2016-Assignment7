@@ -46,7 +46,7 @@
             this.FileSelectionFormMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.NextSelectionFormMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.ExitSelectionFormMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.AboutSelectionFormMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.HelpSelectionFormMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.AboutUsSelectionFormMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.MovieSelectGroupBox.SuspendLayout();
@@ -158,6 +158,7 @@
             // CostTextBox
             // 
             this.CostTextBox.BackColor = System.Drawing.Color.White;
+            this.CostTextBox.ForeColor = System.Drawing.Color.Maroon;
             this.CostTextBox.Location = new System.Drawing.Point(508, 224);
             this.CostTextBox.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.CostTextBox.Name = "CostTextBox";
@@ -168,6 +169,7 @@
             // CategoryTextBox
             // 
             this.CategoryTextBox.BackColor = System.Drawing.Color.White;
+            this.CategoryTextBox.ForeColor = System.Drawing.Color.Maroon;
             this.CategoryTextBox.Location = new System.Drawing.Point(254, 224);
             this.CategoryTextBox.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.CategoryTextBox.Name = "CategoryTextBox";
@@ -178,6 +180,7 @@
             // TitleTextBox
             // 
             this.TitleTextBox.BackColor = System.Drawing.Color.White;
+            this.TitleTextBox.ForeColor = System.Drawing.Color.Maroon;
             this.TitleTextBox.Location = new System.Drawing.Point(254, 71);
             this.TitleTextBox.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.TitleTextBox.Name = "TitleTextBox";
@@ -225,7 +228,7 @@
             // 
             this.SelectionFormMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FileSelectionFormMenuStrip,
-            this.AboutSelectionFormMenuStrip});
+            this.HelpSelectionFormMenuStrip});
             this.SelectionFormMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.SelectionFormMenuStrip.Name = "SelectionFormMenuStrip";
             this.SelectionFormMenuStrip.Size = new System.Drawing.Size(982, 24);
@@ -257,13 +260,13 @@
             this.ExitSelectionFormMenuStrip.Text = "Exit";
             this.ExitSelectionFormMenuStrip.Click += new System.EventHandler(this.ExitSelectionFormMenuStrip_Click);
             // 
-            // AboutSelectionFormMenuStrip
+            // HelpSelectionFormMenuStrip
             // 
-            this.AboutSelectionFormMenuStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.HelpSelectionFormMenuStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AboutUsSelectionFormMenuStrip});
-            this.AboutSelectionFormMenuStrip.Name = "AboutSelectionFormMenuStrip";
-            this.AboutSelectionFormMenuStrip.Size = new System.Drawing.Size(52, 20);
-            this.AboutSelectionFormMenuStrip.Text = "About";
+            this.HelpSelectionFormMenuStrip.Name = "HelpSelectionFormMenuStrip";
+            this.HelpSelectionFormMenuStrip.Size = new System.Drawing.Size(44, 20);
+            this.HelpSelectionFormMenuStrip.Text = "Help";
             // 
             // AboutUsSelectionFormMenuStrip
             // 
@@ -271,6 +274,7 @@
             this.AboutUsSelectionFormMenuStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
             this.AboutUsSelectionFormMenuStrip.Size = new System.Drawing.Size(165, 22);
             this.AboutUsSelectionFormMenuStrip.Text = "About Us";
+            this.AboutUsSelectionFormMenuStrip.Click += new System.EventHandler(this.AboutUsSelectionFormMenuStrip_Click);
             // 
             // SelectionForm
             // 
@@ -294,6 +298,7 @@
             this.MinimizeBox = false;
             this.Name = "SelectionForm";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Movie Bonanza - Your Online Streaming Service";
             this.Load += new System.EventHandler(this.SelectionForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -311,23 +316,23 @@
 
         private System.Windows.Forms.Label SelectFormMainLabel;
         private System.Windows.Forms.Label CurrentMovieLabel;
-        private System.Windows.Forms.ListBox MovieSelectListBox;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.GroupBox MovieSelectGroupBox;
         private System.Windows.Forms.Label CostLabel;
         private System.Windows.Forms.Label CatagoryLabel;
         private System.Windows.Forms.Label TitleLabel;
-        private System.Windows.Forms.TextBox CostTextBox;
-        private System.Windows.Forms.TextBox CategoryTextBox;
-        private System.Windows.Forms.TextBox TitleTextBox;
-        private System.Windows.Forms.PictureBox MoviePictureBox;
         private System.Windows.Forms.Button NextButton;
         private System.Windows.Forms.MenuStrip SelectionFormMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem FileSelectionFormMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem NextSelectionFormMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem ExitSelectionFormMenuStrip;
-        private System.Windows.Forms.ToolStripMenuItem AboutSelectionFormMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem HelpSelectionFormMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem AboutUsSelectionFormMenuStrip;
+        public System.Windows.Forms.ListBox MovieSelectListBox;
+        public System.Windows.Forms.TextBox CostTextBox;
+        public System.Windows.Forms.TextBox CategoryTextBox;
+        public System.Windows.Forms.TextBox TitleTextBox;
+        public System.Windows.Forms.PictureBox MoviePictureBox;
     }
 }
 

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MovieBonanzaAboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MovieBonanzaAboutBox.Designer.cs">
+      <DependentUpon>MovieBonanzaAboutBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="MovieDetails.cs" />
     <Compile Include="MovieList.cs" />
     <Compile Include="OrderForm.cs">
@@ -62,12 +68,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashForm.Designer.cs">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="StreamForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="StreamForm.Designer.cs">
       <DependentUpon>StreamForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="MovieBonanzaAboutBox.resx">
+      <DependentUpon>MovieBonanzaAboutBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OrderForm.resx">
       <DependentUpon>OrderForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,6 +99,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SplashForm.resx">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StreamForm.resx">
       <DependentUpon>StreamForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,6 +196,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\waitingforever.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\129763-simple-red-square-icon-sports-hobbies-filmmaker2-sc49.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\movie-icon-29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Video-Production-Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\screens.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

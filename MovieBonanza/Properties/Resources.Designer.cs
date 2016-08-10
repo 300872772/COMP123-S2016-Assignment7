@@ -63,6 +63,16 @@ namespace MovieBonanza.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _129763_simple_red_square_icon_sports_hobbies_filmmaker2_sc49 {
+            get {
+                object obj = ResourceManager.GetObject("129763-simple-red-square-icon-sports-hobbies-filmmaker2-sc49", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BlankButton {
             get {
                 object obj = ResourceManager.GetObject("BlankButton", resourceCulture);
@@ -163,6 +173,16 @@ namespace MovieBonanza.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap movie_icon_29 {
+            get {
+                object obj = ResourceManager.GetObject("movie-icon-29", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap movie_noPlay_blank {
             get {
                 object obj = ResourceManager.GetObject("movie-noPlay-blank", resourceCulture);
@@ -196,6 +216,16 @@ namespace MovieBonanza.Properties {
         internal static System.Drawing.Bitmap sanctum {
             get {
                 object obj = ResourceManager.GetObject("sanctum", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap screens {
+            get {
+                object obj = ResourceManager.GetObject("screens", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -296,6 +326,16 @@ namespace MovieBonanza.Properties {
         internal static System.Drawing.Bitmap thewayback {
             get {
                 object obj = ResourceManager.GetObject("thewayback", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Video_Production_Icon {
+            get {
+                object obj = ResourceManager.GetObject("Video-Production-Icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

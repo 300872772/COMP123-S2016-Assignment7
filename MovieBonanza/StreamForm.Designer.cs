@@ -33,13 +33,15 @@
             this.BackStreamFormMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.SelectionStreamFormMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.ExitStreamFormMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.AboutStreamFormMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.HelpStreamFormMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.AboutUsStreamFormMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.StreamGroupBox = new System.Windows.Forms.GroupBox();
             this.StreamWebBrowser = new System.Windows.Forms.WebBrowser();
             this.BackButton = new System.Windows.Forms.Button();
             this.SelectionButton = new System.Windows.Forms.Button();
             this.MovieWatchLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.StreamLabel3 = new System.Windows.Forms.Label();
             this.StreamFormMenuStrip.SuspendLayout();
             this.StreamGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -48,7 +50,7 @@
             // 
             this.StreamFormMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FileStreamFormMenuStrip,
-            this.AboutStreamFormMenuStrip});
+            this.HelpStreamFormMenuStrip});
             this.StreamFormMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.StreamFormMenuStrip.Name = "StreamFormMenuStrip";
             this.StreamFormMenuStrip.Size = new System.Drawing.Size(982, 24);
@@ -87,13 +89,13 @@
             this.ExitStreamFormMenuStrip.Text = "Exit";
             this.ExitStreamFormMenuStrip.Click += new System.EventHandler(this.ExitStreamFormMenuStrip_Click);
             // 
-            // AboutStreamFormMenuStrip
+            // HelpStreamFormMenuStrip
             // 
-            this.AboutStreamFormMenuStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.HelpStreamFormMenuStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AboutUsStreamFormMenuStrip});
-            this.AboutStreamFormMenuStrip.Name = "AboutStreamFormMenuStrip";
-            this.AboutStreamFormMenuStrip.Size = new System.Drawing.Size(52, 20);
-            this.AboutStreamFormMenuStrip.Text = "About";
+            this.HelpStreamFormMenuStrip.Name = "HelpStreamFormMenuStrip";
+            this.HelpStreamFormMenuStrip.Size = new System.Drawing.Size(44, 20);
+            this.HelpStreamFormMenuStrip.Text = "Help";
             // 
             // AboutUsStreamFormMenuStrip
             // 
@@ -101,13 +103,14 @@
             this.AboutUsStreamFormMenuStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
             this.AboutUsStreamFormMenuStrip.Size = new System.Drawing.Size(165, 22);
             this.AboutUsStreamFormMenuStrip.Text = "About Us";
+            this.AboutUsStreamFormMenuStrip.Click += new System.EventHandler(this.AboutUsStreamFormMenuStrip_Click);
             // 
             // StreamGroupBox
             // 
             this.StreamGroupBox.Controls.Add(this.StreamWebBrowser);
             this.StreamGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StreamGroupBox.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.StreamGroupBox.Location = new System.Drawing.Point(86, 88);
+            this.StreamGroupBox.Location = new System.Drawing.Point(89, 114);
             this.StreamGroupBox.Name = "StreamGroupBox";
             this.StreamGroupBox.Size = new System.Drawing.Size(615, 384);
             this.StreamGroupBox.TabIndex = 8;
@@ -122,8 +125,8 @@
             this.StreamWebBrowser.Name = "StreamWebBrowser";
             this.StreamWebBrowser.Size = new System.Drawing.Size(609, 359);
             this.StreamWebBrowser.TabIndex = 0;
-            this.StreamWebBrowser.Url = new System.Uri("", System.UriKind.Relative);
-            this.StreamWebBrowser.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.StreamWebBrowser_DocumentCompleted);
+            this.StreamWebBrowser.Url = new System.Uri("https://www.youtube.com/embed/lYHAoCCreZ0", System.UriKind.Absolute);
+            this.StreamWebBrowser.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.StreamWebBrowser_Navigated);
             // 
             // BackButton
             // 
@@ -176,13 +179,35 @@
             // MovieWatchLabel
             // 
             this.MovieWatchLabel.AutoSize = true;
-            this.MovieWatchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MovieWatchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MovieWatchLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.MovieWatchLabel.Location = new System.Drawing.Point(86, 46);
+            this.MovieWatchLabel.Location = new System.Drawing.Point(83, 46);
             this.MovieWatchLabel.Name = "MovieWatchLabel";
-            this.MovieWatchLabel.Size = new System.Drawing.Size(147, 20);
+            this.MovieWatchLabel.Size = new System.Drawing.Size(416, 16);
             this.MovieWatchLabel.TabIndex = 11;
-            this.MovieWatchLabel.Text = "Enjoy Your Movie";
+            this.MovieWatchLabel.Text = "Thank You for Sellecting Movie Bonanza. Enjoy Your Movie";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label1.Location = new System.Drawing.Point(83, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(256, 16);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Your Credit Card Has been Charged";
+            // 
+            // StreamLabel3
+            // 
+            this.StreamLabel3.AutoSize = true;
+            this.StreamLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StreamLabel3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.StreamLabel3.Location = new System.Drawing.Point(89, 84);
+            this.StreamLabel3.Name = "StreamLabel3";
+            this.StreamLabel3.Size = new System.Drawing.Size(331, 16);
+            this.StreamLabel3.TabIndex = 13;
+            this.StreamLabel3.Text = "The Movie you have selected will display soon";
             // 
             // StreamForm
             // 
@@ -191,12 +216,18 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::MovieBonanza.Properties.Resources.video_revs_png11;
             this.ClientSize = new System.Drawing.Size(982, 510);
+            this.Controls.Add(this.StreamLabel3);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.MovieWatchLabel);
             this.Controls.Add(this.SelectionButton);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.StreamGroupBox);
             this.Controls.Add(this.StreamFormMenuStrip);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "StreamForm";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StreamForm";
             this.Activated += new System.EventHandler(this.StreamForm_Activated);
             this.Load += new System.EventHandler(this.StreamForm_Load);
@@ -214,7 +245,7 @@
         private System.Windows.Forms.ToolStripMenuItem FileStreamFormMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem BackStreamFormMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem ExitStreamFormMenuStrip;
-        private System.Windows.Forms.ToolStripMenuItem AboutStreamFormMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem HelpStreamFormMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem AboutUsStreamFormMenuStrip;
         private System.Windows.Forms.GroupBox StreamGroupBox;
         private System.Windows.Forms.Button BackButton;
@@ -222,5 +253,7 @@
         private System.Windows.Forms.ToolStripMenuItem SelectionStreamFormMenuStrip;
         public System.Windows.Forms.WebBrowser StreamWebBrowser;
         private System.Windows.Forms.Label MovieWatchLabel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label StreamLabel3;
     }
 }

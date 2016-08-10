@@ -48,12 +48,16 @@
             this.MovieSelectedGroupBox = new System.Windows.Forms.GroupBox();
             this.TitleTextBox = new System.Windows.Forms.TextBox();
             this.AboutUsOrderFormMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.AboutOrderFormMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.HelpOrderFormMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.ExitOrderFormMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.BackOrderFormMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.FileOrderFormMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StreamOrderFormMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OrderFormMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.DVDCostLabel = new System.Windows.Forms.Label();
+            this.DVDCostTextBox = new System.Windows.Forms.TextBox();
             this.YourOrderGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MoviePictureBox)).BeginInit();
             this.MovieSelectedGroupBox.SuspendLayout();
@@ -71,13 +75,14 @@
             this.CancleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CancleButton.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancleButton.ForeColor = System.Drawing.Color.White;
-            this.CancleButton.Location = new System.Drawing.Point(437, 440);
+            this.CancleButton.Location = new System.Drawing.Point(505, 440);
             this.CancleButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CancleButton.Name = "CancleButton";
             this.CancleButton.Size = new System.Drawing.Size(154, 67);
             this.CancleButton.TabIndex = 10;
             this.CancleButton.Text = "Cancle";
             this.CancleButton.UseVisualStyleBackColor = false;
+            this.CancleButton.Click += new System.EventHandler(this.CancleButton_Click);
             this.CancleButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CancleButton_MouseDown);
             this.CancleButton.MouseLeave += new System.EventHandler(this.CancleButton_MouseLeave);
             this.CancleButton.MouseHover += new System.EventHandler(this.CancleButton_MouseHover);
@@ -135,7 +140,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label5.Location = new System.Drawing.Point(92, 187);
+            this.label5.Location = new System.Drawing.Point(92, 196);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(120, 20);
             this.label5.TabIndex = 7;
@@ -146,7 +151,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label4.Location = new System.Drawing.Point(92, 143);
+            this.label4.Location = new System.Drawing.Point(92, 157);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 20);
             this.label4.TabIndex = 6;
@@ -166,7 +171,8 @@
             // GrandTotalTextBox
             // 
             this.GrandTotalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrandTotalTextBox.Location = new System.Drawing.Point(301, 235);
+            this.GrandTotalTextBox.ForeColor = System.Drawing.Color.Maroon;
+            this.GrandTotalTextBox.Location = new System.Drawing.Point(286, 235);
             this.GrandTotalTextBox.Name = "GrandTotalTextBox";
             this.GrandTotalTextBox.Size = new System.Drawing.Size(170, 26);
             this.GrandTotalTextBox.TabIndex = 4;
@@ -174,7 +180,8 @@
             // SalesTaxTextBox
             // 
             this.SalesTaxTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SalesTaxTextBox.Location = new System.Drawing.Point(301, 187);
+            this.SalesTaxTextBox.ForeColor = System.Drawing.Color.Maroon;
+            this.SalesTaxTextBox.Location = new System.Drawing.Point(286, 196);
             this.SalesTaxTextBox.Name = "SalesTaxTextBox";
             this.SalesTaxTextBox.Size = new System.Drawing.Size(170, 26);
             this.SalesTaxTextBox.TabIndex = 3;
@@ -182,7 +189,8 @@
             // SubTotalTextBox
             // 
             this.SubTotalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubTotalTextBox.Location = new System.Drawing.Point(301, 143);
+            this.SubTotalTextBox.ForeColor = System.Drawing.Color.Maroon;
+            this.SubTotalTextBox.Location = new System.Drawing.Point(286, 157);
             this.SubTotalTextBox.Name = "SubTotalTextBox";
             this.SubTotalTextBox.Size = new System.Drawing.Size(170, 26);
             this.SubTotalTextBox.TabIndex = 2;
@@ -190,7 +198,8 @@
             // CostTextBox
             // 
             this.CostTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CostTextBox.Location = new System.Drawing.Point(301, 59);
+            this.CostTextBox.ForeColor = System.Drawing.Color.Maroon;
+            this.CostTextBox.Location = new System.Drawing.Point(286, 59);
             this.CostTextBox.Name = "CostTextBox";
             this.CostTextBox.Size = new System.Drawing.Size(170, 26);
             this.CostTextBox.TabIndex = 1;
@@ -206,7 +215,7 @@
             this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackButton.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackButton.ForeColor = System.Drawing.Color.White;
-            this.BackButton.Location = new System.Drawing.Point(275, 440);
+            this.BackButton.Location = new System.Drawing.Point(345, 440);
             this.BackButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(154, 67);
@@ -222,6 +231,8 @@
             // YourOrderGroupBox
             // 
             this.YourOrderGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.YourOrderGroupBox.Controls.Add(this.DVDCostLabel);
+            this.YourOrderGroupBox.Controls.Add(this.DVDCostTextBox);
             this.YourOrderGroupBox.Controls.Add(this.DVDCheckBox);
             this.YourOrderGroupBox.Controls.Add(this.label6);
             this.YourOrderGroupBox.Controls.Add(this.label5);
@@ -233,18 +244,19 @@
             this.YourOrderGroupBox.Controls.Add(this.CostTextBox);
             this.YourOrderGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.YourOrderGroupBox.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.YourOrderGroupBox.Location = new System.Drawing.Point(282, 62);
+            this.YourOrderGroupBox.Location = new System.Drawing.Point(353, 45);
             this.YourOrderGroupBox.Name = "YourOrderGroupBox";
-            this.YourOrderGroupBox.Size = new System.Drawing.Size(560, 357);
+            this.YourOrderGroupBox.Size = new System.Drawing.Size(492, 374);
             this.YourOrderGroupBox.TabIndex = 8;
             this.YourOrderGroupBox.TabStop = false;
             this.YourOrderGroupBox.Text = "Your Order";
             // 
             // MoviePictureBox
             // 
-            this.MoviePictureBox.Location = new System.Drawing.Point(9, 189);
+            this.MoviePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MoviePictureBox.Location = new System.Drawing.Point(9, 142);
             this.MoviePictureBox.Name = "MoviePictureBox";
-            this.MoviePictureBox.Size = new System.Drawing.Size(239, 238);
+            this.MoviePictureBox.Size = new System.Drawing.Size(315, 311);
             this.MoviePictureBox.TabIndex = 4;
             this.MoviePictureBox.TabStop = false;
             // 
@@ -253,7 +265,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label2.Location = new System.Drawing.Point(3, 95);
+            this.label2.Location = new System.Drawing.Point(3, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 20);
             this.label2.TabIndex = 3;
@@ -264,7 +276,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label1.Location = new System.Drawing.Point(3, 35);
+            this.label1.Location = new System.Drawing.Point(3, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 20);
             this.label1.TabIndex = 2;
@@ -273,9 +285,10 @@
             // CategoryTextBox
             // 
             this.CategoryTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CategoryTextBox.Location = new System.Drawing.Point(7, 118);
+            this.CategoryTextBox.ForeColor = System.Drawing.Color.Maroon;
+            this.CategoryTextBox.Location = new System.Drawing.Point(7, 104);
             this.CategoryTextBox.Name = "CategoryTextBox";
-            this.CategoryTextBox.Size = new System.Drawing.Size(243, 26);
+            this.CategoryTextBox.Size = new System.Drawing.Size(317, 26);
             this.CategoryTextBox.TabIndex = 1;
             // 
             // MovieSelectedGroupBox
@@ -288,9 +301,9 @@
             this.MovieSelectedGroupBox.Controls.Add(this.TitleTextBox);
             this.MovieSelectedGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MovieSelectedGroupBox.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.MovieSelectedGroupBox.Location = new System.Drawing.Point(12, 63);
+            this.MovieSelectedGroupBox.Location = new System.Drawing.Point(12, 45);
             this.MovieSelectedGroupBox.Name = "MovieSelectedGroupBox";
-            this.MovieSelectedGroupBox.Size = new System.Drawing.Size(256, 444);
+            this.MovieSelectedGroupBox.Size = new System.Drawing.Size(332, 462);
             this.MovieSelectedGroupBox.TabIndex = 7;
             this.MovieSelectedGroupBox.TabStop = false;
             this.MovieSelectedGroupBox.Text = "Movie Selected";
@@ -298,9 +311,10 @@
             // TitleTextBox
             // 
             this.TitleTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleTextBox.Location = new System.Drawing.Point(7, 58);
+            this.TitleTextBox.ForeColor = System.Drawing.Color.Maroon;
+            this.TitleTextBox.Location = new System.Drawing.Point(7, 50);
             this.TitleTextBox.Name = "TitleTextBox";
-            this.TitleTextBox.Size = new System.Drawing.Size(243, 26);
+            this.TitleTextBox.Size = new System.Drawing.Size(317, 26);
             this.TitleTextBox.TabIndex = 0;
             // 
             // AboutUsOrderFormMenuStrip
@@ -309,14 +323,15 @@
             this.AboutUsOrderFormMenuStrip.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
             this.AboutUsOrderFormMenuStrip.Size = new System.Drawing.Size(165, 22);
             this.AboutUsOrderFormMenuStrip.Text = "About Us";
+            this.AboutUsOrderFormMenuStrip.Click += new System.EventHandler(this.AboutUsOrderFormMenuStrip_Click);
             // 
-            // AboutOrderFormMenuStrip
+            // HelpOrderFormMenuStrip
             // 
-            this.AboutOrderFormMenuStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.HelpOrderFormMenuStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AboutUsOrderFormMenuStrip});
-            this.AboutOrderFormMenuStrip.Name = "AboutOrderFormMenuStrip";
-            this.AboutOrderFormMenuStrip.Size = new System.Drawing.Size(52, 20);
-            this.AboutOrderFormMenuStrip.Text = "About";
+            this.HelpOrderFormMenuStrip.Name = "HelpOrderFormMenuStrip";
+            this.HelpOrderFormMenuStrip.Size = new System.Drawing.Size(44, 20);
+            this.HelpOrderFormMenuStrip.Text = "Help";
             // 
             // ExitOrderFormMenuStrip
             // 
@@ -338,11 +353,21 @@
             // 
             this.FileOrderFormMenuStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.BackOrderFormMenuStrip,
+            this.printToolStripMenuItem,
             this.StreamOrderFormMenuStrip,
+            this.cancelToolStripMenuItem,
             this.ExitOrderFormMenuStrip});
             this.FileOrderFormMenuStrip.Name = "FileOrderFormMenuStrip";
             this.FileOrderFormMenuStrip.Size = new System.Drawing.Size(37, 20);
             this.FileOrderFormMenuStrip.Text = "File";
+            // 
+            // printToolStripMenuItem
+            // 
+            this.printToolStripMenuItem.Name = "printToolStripMenuItem";
+            this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.printToolStripMenuItem.Text = "Print";
+            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // StreamOrderFormMenuStrip
             // 
@@ -352,16 +377,45 @@
             this.StreamOrderFormMenuStrip.Text = "Stream";
             this.StreamOrderFormMenuStrip.Click += new System.EventHandler(this.StreamOrderFormMenuStrip_Click);
             // 
+            // cancelToolStripMenuItem
+            // 
+            this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
+            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.cancelToolStripMenuItem.Text = "Cancel";
+            this.cancelToolStripMenuItem.Click += new System.EventHandler(this.cancelToolStripMenuItem_Click);
+            // 
             // OrderFormMenuStrip
             // 
             this.OrderFormMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FileOrderFormMenuStrip,
-            this.AboutOrderFormMenuStrip});
+            this.HelpOrderFormMenuStrip});
             this.OrderFormMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.OrderFormMenuStrip.Name = "OrderFormMenuStrip";
             this.OrderFormMenuStrip.Size = new System.Drawing.Size(982, 24);
             this.OrderFormMenuStrip.TabIndex = 6;
             this.OrderFormMenuStrip.Text = "menuStrip1";
+            // 
+            // DVDCostLabel
+            // 
+            this.DVDCostLabel.AutoSize = true;
+            this.DVDCostLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DVDCostLabel.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.DVDCostLabel.Location = new System.Drawing.Point(92, 99);
+            this.DVDCostLabel.Name = "DVDCostLabel";
+            this.DVDCostLabel.Size = new System.Drawing.Size(81, 20);
+            this.DVDCostLabel.TabIndex = 11;
+            this.DVDCostLabel.Text = "DVD Cost";
+            this.DVDCostLabel.Visible = false;
+            // 
+            // DVDCostTextBox
+            // 
+            this.DVDCostTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DVDCostTextBox.ForeColor = System.Drawing.Color.Maroon;
+            this.DVDCostTextBox.Location = new System.Drawing.Point(286, 99);
+            this.DVDCostTextBox.Name = "DVDCostTextBox";
+            this.DVDCostTextBox.Size = new System.Drawing.Size(170, 26);
+            this.DVDCostTextBox.TabIndex = 10;
+            this.DVDCostTextBox.Visible = false;
             // 
             // OrderForm
             // 
@@ -381,6 +435,7 @@
             this.MinimizeBox = false;
             this.Name = "OrderForm";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderForm";
             this.Load += new System.EventHandler(this.OrderForm_Load);
             this.YourOrderGroupBox.ResumeLayout(false);
@@ -409,7 +464,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox MovieSelectedGroupBox;
         private System.Windows.Forms.ToolStripMenuItem AboutUsOrderFormMenuStrip;
-        private System.Windows.Forms.ToolStripMenuItem AboutOrderFormMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem HelpOrderFormMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem ExitOrderFormMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem BackOrderFormMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem FileOrderFormMenuStrip;
@@ -423,5 +478,9 @@
         public System.Windows.Forms.TextBox SalesTaxTextBox;
         public System.Windows.Forms.TextBox SubTotalTextBox;
         public System.Windows.Forms.CheckBox DVDCheckBox;
+        private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cancelToolStripMenuItem;
+        public System.Windows.Forms.TextBox DVDCostTextBox;
+        public System.Windows.Forms.Label DVDCostLabel;
     }
 }

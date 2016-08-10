@@ -21,6 +21,7 @@ namespace MovieBonanza
         public string GrandTotal;
         public bool DVD;
         public string MovieURL;
+        public int MovieSelectionIndex;
 
         public StreamForm()
         {
@@ -40,9 +41,17 @@ namespace MovieBonanza
             orderForm.SubTotalTextBox.Text = this.SubTotal;
             orderForm.SalesTaxTextBox.Text = this.SalesTax;
             orderForm.GrandTotalTextBox.Text = this.GrandTotal;
-            if (this.DVD.Equals(true)) orderForm.DVDCheckBox.Checked=true; else orderForm.DVDCheckBox.Checked=false;
-            orderForm.MovieURL = this.MovieURL;
+            if (this.DVD.Equals(true))
+            { orderForm.DVDCheckBox.Checked = true;
 
+               orderForm.DVDCostLabel.Visible = true;
+                orderForm.DVDCostTextBox.Visible = true;
+                orderForm.DVDCostTextBox.Text = "10.00";
+            }
+            else
+            { orderForm.DVDCheckBox.Checked = false; }
+            orderForm.MovieURL = this.MovieURL;
+            orderForm.MovieSelectionIndex = this.MovieSelectionIndex;
 
         }
         private void BackButton_MouseHover(object sender, EventArgs e)
@@ -122,9 +131,15 @@ namespace MovieBonanza
             }
         }
 
-        private void StreamWebBrowser_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        private void AboutUsStreamFormMenuStrip_Click(object sender, EventArgs e)
         {
+            MovieBonanzaAboutBox aboutBox = new MovieBonanzaAboutBox();
+            aboutBox.ShowDialog();
+        }
 
+        private void StreamWebBrowser_Navigated(object sender, WebBrowserNavigatedEventArgs e)
+        {
+            StreamLabel3.Visible = false;
         }
     }
 }
