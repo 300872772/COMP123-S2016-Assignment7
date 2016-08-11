@@ -7,10 +7,35 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/* 
+ *Author: Md Mamunur Rahman 
+ * Student ID: 300872772  
+ * 
+ * Date last modified: August 09, 2016 
+ * Description: This application demonstrates a Online Movie Streaming Solution  
+ *  
+ * Version: 0.0.6 - added all comments
+ */
 namespace MovieBonanza
 {
+    /**  
+     * <summary>  
+     * This is the partial MovieBonanzaAboutBox class for about us.  
+     * </summary>  
+     *   
+     * @class MovieBonanzaAboutBox  
+     */
     partial class MovieBonanzaAboutBox : Form
     {
+        //CONSTRUCTOR+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        /**
+        * <summary>
+        * This is the constructor that initialize values.
+        * </summary>
+        * 
+        * @constructor MovieBonanzaAboutBox 
+        * 
+        */
         public MovieBonanzaAboutBox()
         {
             InitializeComponent();

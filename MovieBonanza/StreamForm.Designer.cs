@@ -42,6 +42,7 @@
             this.MovieWatchLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.StreamLabel3 = new System.Windows.Forms.Label();
+            this.OkButton = new System.Windows.Forms.Button();
             this.StreamFormMenuStrip.SuspendLayout();
             this.StreamGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -126,6 +127,7 @@
             this.StreamWebBrowser.Size = new System.Drawing.Size(609, 359);
             this.StreamWebBrowser.TabIndex = 0;
             this.StreamWebBrowser.Url = new System.Uri("https://www.youtube.com/embed/lYHAoCCreZ0", System.UriKind.Absolute);
+            this.StreamWebBrowser.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.StreamWebBrowser_DocumentCompleted);
             this.StreamWebBrowser.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.StreamWebBrowser_Navigated);
             // 
             // BackButton
@@ -209,6 +211,30 @@
             this.StreamLabel3.TabIndex = 13;
             this.StreamLabel3.Text = "The Movie you have selected will display soon";
             // 
+            // OkButton
+            // 
+            this.OkButton.BackColor = System.Drawing.Color.Transparent;
+            this.OkButton.BackgroundImage = global::MovieBonanza.Properties.Resources.button_blank_gray_01;
+            this.OkButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.OkButton.FlatAppearance.BorderSize = 0;
+            this.OkButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.OkButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.OkButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OkButton.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OkButton.ForeColor = System.Drawing.Color.DarkRed;
+            this.OkButton.Location = new System.Drawing.Point(7, 431);
+            this.OkButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.OkButton.Name = "OkButton";
+            this.OkButton.Size = new System.Drawing.Size(75, 67);
+            this.OkButton.TabIndex = 14;
+            this.OkButton.Text = "ok";
+            this.OkButton.UseVisualStyleBackColor = false;
+            this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
+            this.OkButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OkButton_MouseDown);
+            this.OkButton.MouseLeave += new System.EventHandler(this.OkButton_MouseLeave);
+            this.OkButton.MouseHover += new System.EventHandler(this.OkButton_MouseHover);
+            this.OkButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OkButton_MouseUp);
+            // 
             // StreamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -216,6 +242,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::MovieBonanza.Properties.Resources.video_revs_png11;
             this.ClientSize = new System.Drawing.Size(982, 510);
+            this.Controls.Add(this.OkButton);
             this.Controls.Add(this.StreamLabel3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.MovieWatchLabel);
@@ -255,5 +282,6 @@
         private System.Windows.Forms.Label MovieWatchLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label StreamLabel3;
+        private System.Windows.Forms.Button OkButton;
     }
 }

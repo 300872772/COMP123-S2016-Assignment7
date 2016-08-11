@@ -90,6 +90,7 @@
             this.MovieSelectListBox.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.MovieSelectListBox.Name = "MovieSelectListBox";
             this.MovieSelectListBox.Size = new System.Drawing.Size(272, 362);
+            this.MovieSelectListBox.Sorted = true;
             this.MovieSelectListBox.TabIndex = 6;
             this.MovieSelectListBox.SelectedIndexChanged += new System.EventHandler(this.MovieSelectListBox_SelectedIndexChanged);
             // 
@@ -128,7 +129,7 @@
             // CostLabel
             // 
             this.CostLabel.AutoSize = true;
-            this.CostLabel.Location = new System.Drawing.Point(502, 186);
+            this.CostLabel.Location = new System.Drawing.Point(495, 163);
             this.CostLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.CostLabel.Name = "CostLabel";
             this.CostLabel.Size = new System.Drawing.Size(42, 20);
@@ -138,7 +139,7 @@
             // CatagoryLabel
             // 
             this.CatagoryLabel.AutoSize = true;
-            this.CatagoryLabel.Location = new System.Drawing.Point(248, 186);
+            this.CatagoryLabel.Location = new System.Drawing.Point(241, 163);
             this.CatagoryLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.CatagoryLabel.Name = "CatagoryLabel";
             this.CatagoryLabel.Size = new System.Drawing.Size(73, 20);
@@ -148,7 +149,7 @@
             // TitleLabel
             // 
             this.TitleLabel.AutoSize = true;
-            this.TitleLabel.Location = new System.Drawing.Point(248, 32);
+            this.TitleLabel.Location = new System.Drawing.Point(243, 53);
             this.TitleLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.TitleLabel.Name = "TitleLabel";
             this.TitleLabel.Size = new System.Drawing.Size(38, 20);
@@ -159,7 +160,7 @@
             // 
             this.CostTextBox.BackColor = System.Drawing.Color.White;
             this.CostTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.CostTextBox.Location = new System.Drawing.Point(508, 224);
+            this.CostTextBox.Location = new System.Drawing.Point(501, 201);
             this.CostTextBox.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.CostTextBox.Name = "CostTextBox";
             this.CostTextBox.ReadOnly = true;
@@ -170,7 +171,7 @@
             // 
             this.CategoryTextBox.BackColor = System.Drawing.Color.White;
             this.CategoryTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.CategoryTextBox.Location = new System.Drawing.Point(254, 224);
+            this.CategoryTextBox.Location = new System.Drawing.Point(247, 201);
             this.CategoryTextBox.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.CategoryTextBox.Name = "CategoryTextBox";
             this.CategoryTextBox.ReadOnly = true;
@@ -181,7 +182,7 @@
             // 
             this.TitleTextBox.BackColor = System.Drawing.Color.White;
             this.TitleTextBox.ForeColor = System.Drawing.Color.Maroon;
-            this.TitleTextBox.Location = new System.Drawing.Point(254, 71);
+            this.TitleTextBox.Location = new System.Drawing.Point(249, 92);
             this.TitleTextBox.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.TitleTextBox.Name = "TitleTextBox";
             this.TitleTextBox.ReadOnly = true;
@@ -193,10 +194,10 @@
             this.MoviePictureBox.BackColor = System.Drawing.Color.White;
             this.MoviePictureBox.BackgroundImage = global::MovieBonanza.Properties.Resources.waitingforever;
             this.MoviePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.MoviePictureBox.Location = new System.Drawing.Point(12, 35);
+            this.MoviePictureBox.Location = new System.Drawing.Point(31, 56);
             this.MoviePictureBox.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.MoviePictureBox.Name = "MoviePictureBox";
-            this.MoviePictureBox.Size = new System.Drawing.Size(230, 222);
+            this.MoviePictureBox.Size = new System.Drawing.Size(176, 171);
             this.MoviePictureBox.TabIndex = 0;
             this.MoviePictureBox.TabStop = false;
             // 

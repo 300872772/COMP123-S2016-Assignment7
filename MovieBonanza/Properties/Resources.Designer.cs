@@ -123,6 +123,16 @@ namespace MovieBonanza.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap favico {
+            get {
+                object obj = ResourceManager.GetObject("favico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap footloose {
             get {
                 object obj = ResourceManager.GetObject("footloose", resourceCulture);
