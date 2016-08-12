@@ -239,5 +239,18 @@ namespace MovieBonanza
 
 
         }
+
+        private void MovieSelectListBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch(e.KeyCode)
+            {
+                case Keys.Enter:
+                NextButton_Click(sender, e);
+                    break;
+
+            }
+
+
+        }
     }
 }

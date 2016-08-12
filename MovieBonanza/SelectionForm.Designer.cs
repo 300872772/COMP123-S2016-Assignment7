@@ -93,6 +93,7 @@
             this.MovieSelectListBox.Sorted = true;
             this.MovieSelectListBox.TabIndex = 6;
             this.MovieSelectListBox.SelectedIndexChanged += new System.EventHandler(this.MovieSelectListBox_SelectedIndexChanged);
+            this.MovieSelectListBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MovieSelectListBox_KeyDown);
             // 
             // pictureBox2
             // 
