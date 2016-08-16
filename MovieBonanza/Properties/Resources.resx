@@ -124,11 +124,17 @@
   <data name="screens" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\screens.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="selectform1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\selectform1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Video-Production-Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Video-Production-Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BlankButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BlankButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="footloose" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\footloose.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="button_blank_gray_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button_blank_gray_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,6 +157,12 @@
   <data name="cedarrapids" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cedarrapids.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="skin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skin1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waitingforever" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\waitingforever.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="thewayback" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\thewayback.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -166,17 +178,14 @@
   <data name="theotherwoman" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\theotherwoman.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="companymen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\companymen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="129763-simple-red-square-icon-sports-hobbies-filmmaker2-sc49" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\129763-simple-red-square-icon-sports-hobbies-filmmaker2-sc49.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="theroommate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\theroommate.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sanctum" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sanctum.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="companymen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\companymen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="thegreenhornet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\thegreenhornet.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,19 +205,25 @@
   <data name="scrolling" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\scrolling.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="footloose" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\footloose.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sanctum" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sanctum.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="realsteel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\realsteel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="waitingforever" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\waitingforever.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="selectform" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\selectform.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skin2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skin2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="favico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\favico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="justgowithit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\justgowithit.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="favico" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\favico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="skin3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skin3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

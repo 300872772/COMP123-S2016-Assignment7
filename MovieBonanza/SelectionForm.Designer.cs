@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectionForm));
             this.SelectFormMainLabel = new System.Windows.Forms.Label();
-            this.CurrentMovieLabel = new System.Windows.Forms.Label();
-            this.MovieSelectListBox = new System.Windows.Forms.ListBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.MovieSelectGroupBox = new System.Windows.Forms.GroupBox();
             this.CostLabel = new System.Windows.Forms.Label();
@@ -48,10 +46,15 @@
             this.ExitSelectionFormMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpSelectionFormMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.AboutUsSelectionFormMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.MovieSelectListBox = new System.Windows.Forms.ListBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.MovieSelectGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MoviePictureBox)).BeginInit();
             this.SelectionFormMenuStrip.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // SelectFormMainLabel
@@ -59,57 +62,31 @@
             this.SelectFormMainLabel.AutoSize = true;
             this.SelectFormMainLabel.BackColor = System.Drawing.Color.Transparent;
             this.SelectFormMainLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SelectFormMainLabel.ForeColor = System.Drawing.Color.Aqua;
-            this.SelectFormMainLabel.Location = new System.Drawing.Point(102, 51);
+            this.SelectFormMainLabel.ForeColor = System.Drawing.Color.Cyan;
+            this.SelectFormMainLabel.Location = new System.Drawing.Point(90, 37);
             this.SelectFormMainLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SelectFormMainLabel.Name = "SelectFormMainLabel";
             this.SelectFormMainLabel.Size = new System.Drawing.Size(556, 24);
             this.SelectFormMainLabel.TabIndex = 8;
             this.SelectFormMainLabel.Text = "Choose the movie you wish to STREAM from the list below";
             // 
-            // CurrentMovieLabel
-            // 
-            this.CurrentMovieLabel.AutoSize = true;
-            this.CurrentMovieLabel.BackColor = System.Drawing.Color.Transparent;
-            this.CurrentMovieLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.CurrentMovieLabel.Location = new System.Drawing.Point(15, 110);
-            this.CurrentMovieLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.CurrentMovieLabel.Name = "CurrentMovieLabel";
-            this.CurrentMovieLabel.Size = new System.Drawing.Size(115, 20);
-            this.CurrentMovieLabel.TabIndex = 7;
-            this.CurrentMovieLabel.Text = "Current Movies";
-            // 
-            // MovieSelectListBox
-            // 
-            this.MovieSelectListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.MovieSelectListBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MovieSelectListBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.MovieSelectListBox.FormattingEnabled = true;
-            this.MovieSelectListBox.ItemHeight = 20;
-            this.MovieSelectListBox.Location = new System.Drawing.Point(20, 138);
-            this.MovieSelectListBox.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.MovieSelectListBox.Name = "MovieSelectListBox";
-            this.MovieSelectListBox.Size = new System.Drawing.Size(272, 362);
-            this.MovieSelectListBox.Sorted = true;
-            this.MovieSelectListBox.TabIndex = 6;
-            this.MovieSelectListBox.SelectedIndexChanged += new System.EventHandler(this.MovieSelectListBox_SelectedIndexChanged);
-            this.MovieSelectListBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MovieSelectListBox_KeyDown);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::MovieBonanza.Properties.Resources.icons_circle_MOVIElink;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(16, 24);
+            this.pictureBox2.Location = new System.Drawing.Point(26, 26);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(76, 80);
+            this.pictureBox2.Size = new System.Drawing.Size(51, 53);
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             // 
             // MovieSelectGroupBox
             // 
-            this.MovieSelectGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.MovieSelectGroupBox.BackColor = System.Drawing.Color.Transparent;
+            this.MovieSelectGroupBox.BackgroundImage = global::MovieBonanza.Properties.Resources.skin1;
+            this.MovieSelectGroupBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.MovieSelectGroupBox.Controls.Add(this.CostLabel);
             this.MovieSelectGroupBox.Controls.Add(this.CatagoryLabel);
             this.MovieSelectGroupBox.Controls.Add(this.TitleLabel);
@@ -117,8 +94,9 @@
             this.MovieSelectGroupBox.Controls.Add(this.CategoryTextBox);
             this.MovieSelectGroupBox.Controls.Add(this.TitleTextBox);
             this.MovieSelectGroupBox.Controls.Add(this.MoviePictureBox);
-            this.MovieSelectGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.MovieSelectGroupBox.Location = new System.Drawing.Point(314, 138);
+            this.MovieSelectGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MovieSelectGroupBox.ForeColor = System.Drawing.Color.Yellow;
+            this.MovieSelectGroupBox.Location = new System.Drawing.Point(332, 98);
             this.MovieSelectGroupBox.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.MovieSelectGroupBox.Name = "MovieSelectGroupBox";
             this.MovieSelectGroupBox.Padding = new System.Windows.Forms.Padding(6, 8, 6, 8);
@@ -130,6 +108,7 @@
             // CostLabel
             // 
             this.CostLabel.AutoSize = true;
+            this.CostLabel.ForeColor = System.Drawing.Color.Cyan;
             this.CostLabel.Location = new System.Drawing.Point(495, 163);
             this.CostLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.CostLabel.Name = "CostLabel";
@@ -140,6 +119,7 @@
             // CatagoryLabel
             // 
             this.CatagoryLabel.AutoSize = true;
+            this.CatagoryLabel.ForeColor = System.Drawing.Color.Cyan;
             this.CatagoryLabel.Location = new System.Drawing.Point(241, 163);
             this.CatagoryLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.CatagoryLabel.Name = "CatagoryLabel";
@@ -150,6 +130,7 @@
             // TitleLabel
             // 
             this.TitleLabel.AutoSize = true;
+            this.TitleLabel.ForeColor = System.Drawing.Color.Cyan;
             this.TitleLabel.Location = new System.Drawing.Point(243, 53);
             this.TitleLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.TitleLabel.Name = "TitleLabel";
@@ -213,7 +194,7 @@
             this.NextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NextButton.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextButton.ForeColor = System.Drawing.Color.White;
-            this.NextButton.Location = new System.Drawing.Point(788, 429);
+            this.NextButton.Location = new System.Drawing.Point(577, 404);
             this.NextButton.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(173, 79);
@@ -233,7 +214,7 @@
             this.HelpSelectionFormMenuStrip});
             this.SelectionFormMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.SelectionFormMenuStrip.Name = "SelectionFormMenuStrip";
-            this.SelectionFormMenuStrip.Size = new System.Drawing.Size(982, 24);
+            this.SelectionFormMenuStrip.Size = new System.Drawing.Size(994, 24);
             this.SelectionFormMenuStrip.TabIndex = 12;
             this.SelectionFormMenuStrip.Text = "menuStrip1";
             // 
@@ -278,21 +259,59 @@
             this.AboutUsSelectionFormMenuStrip.Text = "About Us";
             this.AboutUsSelectionFormMenuStrip.Click += new System.EventHandler(this.AboutUsSelectionFormMenuStrip_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackgroundImage = global::MovieBonanza.Properties.Resources.skin2;
+            this.groupBox1.Controls.Add(this.MovieSelectListBox);
+            this.groupBox1.ForeColor = System.Drawing.Color.Yellow;
+            this.groupBox1.Location = new System.Drawing.Point(33, 92);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(249, 399);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Current Movies";
+            // 
+            // MovieSelectListBox
+            // 
+            this.MovieSelectListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.MovieSelectListBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MovieSelectListBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.MovieSelectListBox.FormattingEnabled = true;
+            this.MovieSelectListBox.ItemHeight = 20;
+            this.MovieSelectListBox.Location = new System.Drawing.Point(22, 30);
+            this.MovieSelectListBox.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.MovieSelectListBox.Name = "MovieSelectListBox";
+            this.MovieSelectListBox.Size = new System.Drawing.Size(208, 342);
+            this.MovieSelectListBox.Sorted = true;
+            this.MovieSelectListBox.TabIndex = 7;
+            this.MovieSelectListBox.SelectedIndexChanged += new System.EventHandler(this.MovieSelectListBox_SelectedIndexChanged);
+            this.MovieSelectListBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MovieSelectListBox_KeyDown);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::MovieBonanza.Properties.Resources.skin3;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(332, 404);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(647, 79);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
             // SelectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::MovieBonanza.Properties.Resources.movie_noPlay_blank;
-            this.ClientSize = new System.Drawing.Size(982, 510);
+            this.ClientSize = new System.Drawing.Size(994, 510);
             this.ControlBox = false;
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.SelectionFormMenuStrip);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.MovieSelectGroupBox);
             this.Controls.Add(this.SelectFormMainLabel);
-            this.Controls.Add(this.CurrentMovieLabel);
-            this.Controls.Add(this.MovieSelectListBox);
             this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -309,6 +328,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.MoviePictureBox)).EndInit();
             this.SelectionFormMenuStrip.ResumeLayout(false);
             this.SelectionFormMenuStrip.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,7 +338,6 @@
         #endregion
 
         private System.Windows.Forms.Label SelectFormMainLabel;
-        private System.Windows.Forms.Label CurrentMovieLabel;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.GroupBox MovieSelectGroupBox;
         private System.Windows.Forms.Label CostLabel;
@@ -330,11 +350,13 @@
         private System.Windows.Forms.ToolStripMenuItem ExitSelectionFormMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem HelpSelectionFormMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem AboutUsSelectionFormMenuStrip;
-        public System.Windows.Forms.ListBox MovieSelectListBox;
         public System.Windows.Forms.TextBox CostTextBox;
         public System.Windows.Forms.TextBox CategoryTextBox;
         public System.Windows.Forms.TextBox TitleTextBox;
         public System.Windows.Forms.PictureBox MoviePictureBox;
+        private System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.ListBox MovieSelectListBox;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

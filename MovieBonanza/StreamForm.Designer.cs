@@ -169,7 +169,7 @@
             this.SelectionButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SelectionButton.Name = "SelectionButton";
             this.SelectionButton.Size = new System.Drawing.Size(152, 142);
-            this.SelectionButton.TabIndex = 10;
+            this.SelectionButton.TabIndex = 0;
             this.SelectionButton.Text = "Selection";
             this.SelectionButton.UseVisualStyleBackColor = false;
             this.SelectionButton.Click += new System.EventHandler(this.SelectionButton_Click);

@@ -255,8 +255,15 @@ namespace MovieBonanza
        */
         private void ExitStreamFormMenuStrip_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Application.Exit();
+            DialogResult exitDialogResult;
+            exitDialogResult = MessageBox.Show("Do you realy want to exit?", "Exit Confirmation", MessageBoxButtons.YesNo);
+
+            if (exitDialogResult == DialogResult.Yes)
+            {
+                this.Close();
+                Application.Exit();
+            }
+
         }
         /**
        * <summary>

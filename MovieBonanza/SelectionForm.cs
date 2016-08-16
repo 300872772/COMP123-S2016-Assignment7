@@ -145,8 +145,14 @@ namespace MovieBonanza
        */
         private void ExitSelectionFormMenuStrip_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Application.Exit();
+            DialogResult exitDialogResult;
+            exitDialogResult = MessageBox.Show("Do you realy want to exit?", "Exit Confirmation", MessageBoxButtons.YesNo);
+
+            if (exitDialogResult == DialogResult.Yes)
+            {
+                this.Close();
+                Application.Exit();
+            }
         }
         /**
        * <summary>
@@ -178,7 +184,7 @@ namespace MovieBonanza
         private void SelectionForm_Load(object sender, EventArgs e)
         {
              movieList = new MovieList("movieData");
-            // movieList.OrderByDescending(o => o.Title).ToList();
+
 
             foreach (var item in movieList)
             {
@@ -194,7 +200,7 @@ namespace MovieBonanza
             TitleTextBox.Text = movieList[index].Title;
             CategoryTextBox.Text = movieList[index].Category;
             CostTextBox.Text = movieList[index].Cost.ToString();
-            MoviePictureBox.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject(movieList[0].MovieImage.Trim());
+            MoviePictureBox.BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject(movieList[index].MovieImage.Trim());
             MovieURL = movieList[index].MovieURL;
 
 

@@ -308,8 +308,14 @@ namespace MovieBonanza
        */
         private void ExitOrderFormMenuStrip_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Application.Exit();
+            DialogResult exitDialogResult;
+            exitDialogResult = MessageBox.Show("Do you realy want to exit?", "Exit Confirmation", MessageBoxButtons.YesNo);
+
+            if (exitDialogResult == DialogResult.Yes)
+            {
+                this.Close();
+                Application.Exit();
+            }
         }
         /**
        * <summary>
@@ -373,9 +379,16 @@ namespace MovieBonanza
        */
         private void CancleButton_Click(object sender, EventArgs e)
         {
-            SelectionForm selectForm = new SelectionForm();
-            selectForm.Show();
-            this.Close();
+            DialogResult cancleDialogResult;
+            cancleDialogResult = MessageBox.Show("Do you realy want to cancle your selection?", "Cancle Confirmation", MessageBoxButtons.YesNo);
+
+            if (cancleDialogResult == DialogResult.Yes)
+            {
+                SelectionForm selectForm = new SelectionForm();
+                selectForm.Show();
+                this.Close();
+            }
+
         }
         /**
        * <summary>
